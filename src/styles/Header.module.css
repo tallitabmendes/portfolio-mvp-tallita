@@ -1,0 +1,84 @@
+/* ============================================
+   Header.module.css — Versão Light Profissional
+   ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.2rem 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+/* Efeito quando o usuário rola a página */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.8); /* Branco translúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.3rem;
+  font-weight: 800;
+  /* Azul Royal em vez de Roxo */
+  color: #2563eb; 
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+}
+
+.logo:hover {
+  color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav a {
+  /* Cinza escuro para contraste no fundo claro */
+  color: #475569; 
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+/* Sublinhado animado em Azul */
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #2563eb;
+}
+
+.nav a:hover::after {
+  width: 100%;
